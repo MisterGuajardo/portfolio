@@ -29,14 +29,6 @@ export function SiteHeader() {
               {item.label}
             </a>
           ))}
-          <a
-            href={site.cvUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-seal-500 px-4 py-1.5 text-sm font-medium text-paper transition-colors hover:bg-seal-400"
-          >
-            Descargar CV
-          </a>
         </div>
       </nav>
     </header>

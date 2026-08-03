@@ -214,14 +214,6 @@ export function About() {
             <p className="mt-1 font-mono text-sm text-sakura-400">
               Disponible: {site.availableFor}
             </p>
-            <a
-              href={site.cvUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 rounded-full border border-ink-600 px-6 py-2.5 text-sm font-semibold text-paper-dim transition-colors hover:border-sakura-400 hover:text-sakura-300"
-            >
-              Descargar CV
-            </a>
           </div>
 
           <div className="space-y-6 text-lg leading-relaxed text-paper-dim">
@@ -475,7 +467,7 @@ export function Contact() {
             >
               Escríbeme a {site.email}
             </a>
-            <SocialLinks showCv />
+            <SocialLinks />
             <p className="font-mono text-sm text-paper-mute">
               Disponible: {site.availableFor} — {site.location}
             </p>

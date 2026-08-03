@@ -14,7 +14,6 @@ export const site = {
   githubHandle: "MisterGuajardo",
   linkedin: "https://www.linkedin.com/in/m-i-g-p",
   email: "guajardomip@gmail.com",
-  cvUrl: "https://misterguajardo.github.io/portfolio/matias-guajardo-cv.pdf",
   location: "Retiro, Chile",
   availableFor: "Remoto, híbrido o presencial",
   keywords: [

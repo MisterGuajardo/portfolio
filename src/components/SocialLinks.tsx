@@ -35,10 +35,8 @@ function MailIcon() {
 
 export function SocialLinks({
   className = "flex items-center gap-3",
-  showCv = false,
 }: {
   className?: string;
-  showCv?: boolean;
 }) {
   return (
     <div className={className}>
@@ -67,25 +65,6 @@ export function SocialLinks({
       >
         <MailIcon />
       </a>
-      {showCv && (
-        <a
-          href={site.cvUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex h-11 items-center gap-2 rounded-full border border-ink-700 px-4 text-sm font-medium text-paper-dim transition-colors hover:border-sakura-400 hover:text-sakura-300"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            className="h-4 w-4"
-          >
-            <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
-          </svg>
-          CV
-        </a>
-      )}
     </div>
   );
 }
