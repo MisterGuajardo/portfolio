@@ -1,5 +1,5 @@
 User-Agent: *
 Allow: /
 
-Host: https://misterguajardo.github.io/matias-guajardo-portfolio
-Sitemap: https://misterguajardo.github.io/matias-guajardo-portfolio/sitemap.xml
+Host: https://misterguajardo.github.io/portfolio
+Sitemap: https://misterguajardo.github.io/portfolio/sitemap.xml
