@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Matias Guajardo Palacios — Portafolio
 
-## Getting Started
+Portafolio personal de **Matias Guajardo Palacios**, Desarrollador Full Stack y aspirante a Arquitecto de Software.
 
-First, run the development server:
+Estilo oriental en contenedor oscuro: negros profundos, blanco papel y rojos suaves de cerezo (sakura). Construido con Next.js (App Router), React 19, TypeScript y Tailwind CSS v4.
+
+## Stack
+
+- Next.js 16 (static export)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- next/font (Manrope, Noto Serif JP, JetBrains Mono) — self-hosted
+- SEO: metadata, OpenGraph, Twitter Cards, JSON-LD (Person), sitemap, robots, manifest
+
+## Desarrollo
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy a GitHub Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+El proyecto está configurado para publicarse como **project page** con
+`basePath: /matias-guajardo-portfolio` en producción. En desarrollo
+(`npm run dev`) el `basePath` se desactiva y el sitio corre en `/`.
 
-## Learn More
+1. Crea el repositorio en GitHub: `MisterGuajardo/matias-guajardo-portfolio`
+   (puede ser privado; en Settings → Pages, elige *Deploy from a branch* → `gh-pages`).
+2. Conecta el remoto:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git remote add origin https://github.com/MisterGuajardo/matias-guajardo-portfolio.git
+   git add -A && git commit -m "Portafolio inicial"
+   git push -u origin main
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Publica (compila el static export en `out/` y lo sube a la rama `gh-pages`):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm run deploy
+   ```
 
-## Deploy on Vercel
+El sitio quedará disponible en:
+`https://misterguajardo.github.io/matias-guajardo-portfolio/`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Datos a personalizar
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **`src/lib/site.ts`**: email, LinkedIn y enlaces sociales (ya actualizados con el CV).
+- **`public/matias-guajardo-cv.pdf`**: reemplaza por tu CV real (el actual es un placeholder válido).
+- **`src/components/Sections.tsx`**: edita `EXPERIENCE`, `SKILLS`, `PROJECTS` y `EDUCATION` con tus datos reales.
+- **`src/components/SakuraTree.tsx` / `Torii.tsx`**: ajusta forma y tono de los árboles de cerezo y la puerta torii.

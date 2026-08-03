@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <rect width="180" height="180" rx="36" fill="#050505"/>
+  <rect x="14" y="14" width="152" height="152" rx="30" fill="#c73e3a"/>
+  <text x="90" y="122" font-family="'Noto Serif JP', serif" font-size="108" font-weight="600" fill="#f6f1ea" text-anchor="middle">全</text>
+</svg>
