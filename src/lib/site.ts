@@ -8,13 +8,13 @@ export const site = {
     "Construyo productos web robustos y elegantes: de la lógica del backend al detalle del frontend, en camino hacia la arquitectura de software.",
   description:
     "Portafolio de Matias Guajardo Palacios, Desarrollador Full Stack e Ingeniero en Informática Empresarial (Universidad de Talca). Especializado en refactorización de sistemas legados, arquitectura SaaS multi-tenant e integración de bases de datos relacionales.",
-  basePath: "/matias-guajardo-portfolio",
-  url: "https://misterguajardo.github.io/matias-guajardo-portfolio",
+  basePath: "/portfolio",
+  url: "https://misterguajardo.github.io/portfolio",
   github: "https://github.com/MisterGuajardo",
   githubHandle: "MisterGuajardo",
   linkedin: "https://www.linkedin.com/in/m-i-g-p",
   email: "guajardomip@gmail.com",
-  cvUrl: "https://misterguajardo.github.io/matias-guajardo-portfolio/matias-guajardo-cv.pdf",
+  cvUrl: "https://misterguajardo.github.io/portfolio/matias-guajardo-cv.pdf",
   location: "Retiro, Chile",
   availableFor: "Remoto, híbrido o presencial",
   keywords: [

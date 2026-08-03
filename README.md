@@ -25,8 +25,11 @@ Abre [http://localhost:3000](http://localhost:3000).
 ## Deploy a GitHub Pages
 
 El proyecto está configurado para publicarse como **project page** con
-`basePath: /matias-guajardo-portfolio` en producción. En desarrollo
+`basePath: /portfolio` en producción. En desarrollo
 (`npm run dev`) el `basePath` se desactiva y el sitio corre en `/`.
+
+`public/.nojekyll` es imprescindible: sin él GitHub Pages ejecuta Jekyll e
+ignora la carpeta `_next`, por lo que el CSS y el JS no se sirven.
 
 Hay dos formas de publicar; ambas compilan el static export en `out/` y lo
 suben a la rama `gh-pages` con `gh-pages`.
@@ -53,9 +56,9 @@ El workflow `.github/workflows/deploy.yml` hace el build y publica con
    el botón *Run workflow* (deploy manual).
 3. En Settings → Pages, elige *Deploy from a branch* → `gh-pages`.
 
-> Nota: si el repositorio final se llama distinto a `portfolio` (por ejemplo
-> `matias-guajardo-portfolio`), actualiza `basePath` y `url` en
-> `next.config.ts` y `src/lib/site.ts` para que coincidan con la URL real.
+> Nota: `basePath` y `url` ya apuntan al repositorio `portfolio`
+> (`https://misterguajardo.github.io/portfolio/`). Si cambias el nombre del
+> repositorio, actualízalos en `next.config.ts` y `src/lib/site.ts`.
 
 ## Datos a personalizar
 
