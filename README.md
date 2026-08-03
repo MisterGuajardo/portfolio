@@ -28,24 +28,34 @@ El proyecto está configurado para publicarse como **project page** con
 `basePath: /matias-guajardo-portfolio` en producción. En desarrollo
 (`npm run dev`) el `basePath` se desactiva y el sitio corre en `/`.
 
-1. Crea el repositorio en GitHub: `MisterGuajardo/matias-guajardo-portfolio`
-   (puede ser privado; en Settings → Pages, elige *Deploy from a branch* → `gh-pages`).
-2. Conecta el remoto:
+Hay dos formas de publicar; ambas compilan el static export en `out/` y lo
+suben a la rama `gh-pages` con `gh-pages`.
+
+### Manual
+
+```bash
+npm run deploy
+```
+
+### Con GitHub Actions (recomendado)
+
+El workflow `.github/workflows/deploy.yml` hace el build y publica con
+`npm run deploy` usando `GITHUB_TOKEN` (no necesitas tokens manuales).
+
+1. Sube el código a GitHub (rama `master`):
 
    ```bash
-   git remote add origin https://github.com/MisterGuajardo/matias-guajardo-portfolio.git
-   git add -A && git commit -m "Portafolio inicial"
-   git push -u origin main
+   git remote add origin https://github.com/MisterGuajardo/portfolio.git
+   git push -u origin master
    ```
 
-3. Publica (compila el static export en `out/` y lo sube a la rama `gh-pages`):
+2. En GitHub, en **Actions**, ejecuta el workflow **"Deploy a GitHub Pages"** con
+   el botón *Run workflow* (deploy manual).
+3. En Settings → Pages, elige *Deploy from a branch* → `gh-pages`.
 
-   ```bash
-   npm run deploy
-   ```
-
-El sitio quedará disponible en:
-`https://misterguajardo.github.io/matias-guajardo-portfolio/`
+> Nota: si el repositorio final se llama distinto a `portfolio` (por ejemplo
+> `matias-guajardo-portfolio`), actualiza `basePath` y `url` en
+> `next.config.ts` y `src/lib/site.ts` para que coincidan con la URL real.
 
 ## Datos a personalizar
 
