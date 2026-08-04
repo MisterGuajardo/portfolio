@@ -110,11 +110,11 @@ const EXPERIENCE = [
     summary:
       "Modernicé el sistema que sostiene la calidad institucional de la Universidad de Talca: la plataforma que coordina acreditaciones e investigaciones académicas. Hoy es rápida, segura y clara para quienes la usan a diario.",
     bullets: [
-      "Construí las nuevas aplicaciones web del sistema de Acreditación y Gestión de Investigaciones, conectadas con el banco de datos institucional mediante 70+ automatizaciones.",
-      "Migré los datos históricos de ambas áreas sin perder ni un registro: la información de décadas quedó ordenada, integra y disponible para el equipo académico.",
-      "Reemplacé código antiguo y frágil por plataformas modernas, completando 80% de la migración en Acreditación y 60% en Investigaciones.",
-      "Detecté y corregí un problema de concurrencia que afectaba a usuarios que trabajaban sobre el mismo registro, desplegando soluciones fuera de horario para no interrumpir el trabajo.",
-      "Traduje el avance técnico a lenguaje natural en reuniones quincenales con stakeholders académicos, manteniéndolos alineados y tomando decisiones junto a ellos.",
+      "Construí APIs REST en NestJS para los sistemas de Acreditación y Gestión de Investigaciones, con autenticación JWT y comunicación en tiempo real vía Socket.io, integrando Oracle DB mediante 70+ triggers PL/SQL y alcanzando 99% de cobertura OpenAPI/Swagger.",
+      "Cargué en Oracle DB los datos ya depurados de Acreditación (+50 tablas), y migré los de Investigaciones —ya en Oracle— a un nuevo esquema mediante ETL en Python (extracción, limpieza, carga), sin pérdida de datos ni quiebres de integridad histórica.",
+      "Refactoricé código legado en PHP y PL/SQL hacia Angular/NestJS, completando 80% de la migración en Acreditación y 60% en Gestión de Investigaciones, reduciendo deuda técnica y disminuyendo los incidentes recurrentes en producción.",
+      "Ejecuté 3 despliegues fuera de horario para corregir un bug de concurrencia en tiempo real que afectaba a usuarios interactuando simultáneamente sobre el mismo registro desde ubicaciones distintas, evitando conflictos de datos en producción.",
+      "Traduje el avance técnico a lenguaje natural en reuniones quincenales con grupos de 2 a 3 stakeholders académicos y administrativos no técnicos, manteniéndolos alineados con el progreso del proyecto.",
     ],
   },
   {
