@@ -94,9 +94,9 @@ export function Hero() {
                 <dd className="font-serif text-3xl text-sakura-300 xl:text-4xl">
                   {s.value}
                 </dd>
-                <p className="mt-1 text-xs leading-snug text-paper-mute">
+                <dd className="mt-1 text-xs leading-snug text-paper-mute">
                   {s.label}
-                </p>
+                </dd>
               </div>
             ))}
           </dl>
