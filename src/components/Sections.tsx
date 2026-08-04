@@ -167,14 +167,14 @@ const PROJECTS = [
   },
   {
     title: "Sistema de Gestión de Tickets",
-    subtitle: "Proyecto personal en Firebase/Firestore",
+    subtitle: "Proyecto personal con Angular y NestJS",
     period: "Abril 2026",
-    status: "NO FINALIZADO",
+    status: "DESARROLLO PAUSADO",
     statusTone: "muted",
     lead: "Un sistema para ordenar la atención a clientes y no perder ningún caso.",
     description:
       "Proyecto para profundizar en bases de datos en la nube: modelado de datos, acceso seguro con Google, archivos y analíticas de uso. Un laboratorio personal para dominar herramientas en demanda.",
-    tags: ["Firebase", "Firestore", "Google Login", "Analytics"],
+    tags: ["Angular", "NestJS", "Firebase", "Firestore", "Google Login", "Analytics"],
   },
 ];
 
