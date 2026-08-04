@@ -156,13 +156,13 @@ const SKILLS = [
 const PROJECTS = [
   {
     title: "Skopos",
-    subtitle: "Plataforma de matching CV-oferta con IA",
+    subtitle: "Tu aliado para postular mejor a las ofertas que te encajan",
     period: "Mayo 2026 – presente",
     status: "EN DESARROLLO",
     statusTone: "seal",
-    lead: "¿Y si encontrar al candidato correcto tomara minutos en vez de semanas?",
+    lead: "¿Y si buscar trabajo dejara de ser buscar y pasara a ser elegir?",
     description:
-      "Un sistema que lee, entiende y evalúa candidatos de forma automática. Arquitectura basada en eventos, procesamiento en segundo plano e inteligencia artificial para emparejar personas y oportunidades.",
+      "Skopos busca y almacena ofertas de empleo según los cargos a los que quieras postular, y las compara con tu experiencia real para decirte cuánto encajas. Por cada oferta obtienes un score de compatibilidad, tus ventajas y desventajas, consejos prácticos y el link directo para postular. Además incluye un generador de currículum adaptado a cada oferta, construido solo con tus datos reales: sin inventar experiencias ni mentir.",
     tags: ["NestJS", "BullMQ", "Redis", "Python", "Socket.io", "IA"],
   },
   {
