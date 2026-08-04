@@ -8,6 +8,7 @@ type KanjiInfoProps = {
   meaning: string;
   description: string;
   relation: string;
+  variant?: "floating" | "inline";
 };
 
 export function KanjiInfo({
@@ -16,6 +17,7 @@ export function KanjiInfo({
   meaning,
   description,
   relation,
+  variant = "floating",
 }: KanjiInfoProps) {
   const [open, setOpen] = useState(false);
 
@@ -39,12 +41,29 @@ export function KanjiInfo({
         onClick={() => setOpen(true)}
         aria-label={`Ver el significado del kanji ${kanji}`}
         title={`${kanji} — ${meaning}`}
-        className="group pointer-events-auto absolute right-2 top-0 hidden select-none font-serif text-[9rem] leading-none text-sakura-500/[0.08] transition-colors duration-300 hover:text-sakura-400/40 focus:outline-none focus-visible:text-sakura-400/60 xl:block"
+        className={
+          variant === "inline"
+            ? "group inline-flex select-none flex-col items-center gap-2 rounded-2xl border border-ink-700 bg-ink-850 px-6 py-5 transition-colors hover:border-sakura-400/60 focus:outline-none focus-visible:border-sakura-400"
+            : "group pointer-events-auto absolute right-2 top-0 hidden select-none font-serif text-[9rem] leading-none text-sakura-500/[0.08] transition-colors duration-300 hover:text-sakura-400/40 focus:outline-none focus-visible:text-sakura-400/60 xl:block"
+        }
       >
-        {kanji}
-        <span className="pointer-events-none absolute bottom-1 left-0 right-0 text-center font-mono text-xs tracking-[0.3em] text-seal-400/0 transition-colors duration-300 group-hover:text-seal-400">
-          significado
-        </span>
+        {variant === "inline" ? (
+          <>
+            <span className="font-serif text-6xl leading-none text-sakura-400 transition-transform duration-300 group-hover:scale-105">
+              {kanji}
+            </span>
+            <span className="font-mono text-[10px] tracking-[0.3em] text-seal-400/80 transition-colors group-hover:text-seal-400">
+              significado
+            </span>
+          </>
+        ) : (
+          <>
+            {kanji}
+            <span className="pointer-events-none absolute bottom-1 left-0 right-0 text-center font-mono text-xs tracking-[0.3em] text-seal-400/0 transition-colors duration-300 group-hover:text-seal-400">
+              significado
+            </span>
+          </>
+        )}
       </button>
 
       {open && (

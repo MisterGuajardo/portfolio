@@ -59,6 +59,14 @@ const KANJI: Record<
     relation:
       "La mano que se tiende para conocernos, colaborar y construir algo juntos.",
   },
+  求: {
+    reading: "kyū",
+    meaning: "Buscar, pedir, alcanzar",
+    description:
+      "Dibuja una mano que se extiende hacia lo que desea alcanzar. Es el corazón de palabras como 求人 (oferta de empleo) y 要求 (requerimiento).",
+    relation:
+      "Las oportunidades laborales se buscan, se piden y se alcanzan: este gesto abre cada nuevo capítulo de mi trayectoria.",
+  },
 };
 
 function SectionHeading({
@@ -247,7 +255,7 @@ const EDUCATION = [
   {
     title: "Técnico Profesional en Contabilidad",
     period: "2018 – 2019",
-    place: "Enseñanza Media Técnico Profesional",
+    place: "Liceo Guillermo Marín Larraín — Retiro, Región del Maule",
     note: "Título obtenido tras mi práctica profesional en la Compañía Chilena de Fósforos S.A (noviembre 2019 – enero 2020).",
   },
 ];
@@ -354,6 +362,20 @@ export function Experience() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="mt-12 flex flex-col items-start gap-8 rounded-2xl border border-ink-700 bg-gradient-to-br from-ink-850 to-ink-900 p-8 lg:flex-row lg:items-center lg:gap-10 lg:p-10">
+          <KanjiInfo variant="inline" kanji="求" {...KANJI["求"]} />
+          <div>
+            <h3 className="font-serif text-2xl leading-snug text-paper xl:text-3xl">
+              ¿Qué esperas para integrarte?
+            </h3>
+            <p className="mt-3 max-w-2xl leading-relaxed text-paper-dim">
+              Mi trayectoria no termina aquí. Este espacio se irá completando
+              con las nuevas oportunidades laborales que se sumen: cada equipo,
+              cada desafío y cada oferta nueva pasará a formar parte de este
+              recorrido.
+            </p>
+          </div>
         </div>
       </div>
     </section>
