@@ -1,10 +1,65 @@
 import { Seal } from "./Seal";
 import { SocialLinks } from "./SocialLinks";
 import { SakuraTree } from "./SakuraTree";
+import { KanjiInfo } from "./KanjiInfo";
 import { site } from "@/lib/site";
 
 const WRAP =
   "mx-auto w-full max-w-[1700px] px-6 sm:px-10 lg:px-16 xl:px-24";
+
+const KANJI: Record<
+  string,
+  { reading: string; meaning: string; description: string; relation: string }
+> = {
+  匠: {
+    reading: "shō · takumi",
+    meaning: "Artesano, artífice",
+    description:
+      "Se compone de una caja (匚) que guarda un hacha (斤): la herramienta de quien trabaja con sus manos. Representa al maestro que domina su oficio con paciencia y precisión.",
+    relation:
+      "Como un artesano, mi trabajo no es solo código: es pulir sistemas hasta que cumplan su propósito y explicarlo en lenguaje simple.",
+  },
+  歴: {
+    reading: "reki",
+    meaning: "Historia, trayectoria, pasar por",
+    description:
+      "Originalmente representaba el paso del tiempo y los lugares recorridos. Es el corazón de palabras como 歴史 (historia) o 経歴 (trayectoria profesional).",
+    relation:
+      "Resume los caminos por los que he pasado: cada rol, cada proyecto y cada aprendizaje que se acumulan a lo largo de mi carrera.",
+  },
+  技: {
+    reading: "gi",
+    meaning: "Habilidad, técnica",
+    description:
+      "Une la mano (扌) con una rama que da apoyo (支): el movimiento hábil de quien domina una técnica. Es el corazón de 技術 (tecnología).",
+    relation:
+      "Es exactamente lo que ofrezco: técnicas concretas, aplicadas con las manos, para construir tu producto.",
+  },
+  作: {
+    reading: "saku",
+    meaning: "Crear, hacer, construir",
+    description:
+      "Muestra a una persona (亻) trabajando con una herramienta (乍). Está presente en palabras como 作品 (obra) y 制作 (creación).",
+    relation:
+      "Cada proyecto es una obra que construyo desde cero, con mis propias ideas, desde la primera línea de código hasta el producto final.",
+  },
+  学: {
+    reading: "gaku",
+    meaning: "Aprendizaje, estudio",
+    description:
+      "En su forma original, unas manos guían a un niño (子) hacia el conocimiento. Representa a la vez enseñar y aprender.",
+    relation:
+      "Todo lo que soy hoy se apoya en lo que estudié: la base sobre la que construí mi carrera y mi forma de trabajar.",
+  },
+  手: {
+    reading: "te · shu",
+    meaning: "Mano",
+    description:
+      "Un pictograma directo: la mano con sus dedos extendidos. Está en palabras como 握手 (apretón de manos) y 協力 (colaboración).",
+    relation:
+      "La mano que se tiende para conocernos, colaborar y construir algo juntos.",
+  },
+};
 
 function SectionHeading({
   number,
@@ -31,13 +86,8 @@ function SectionHeading({
         {title}
       </h2>
       <div className="mt-7 h-px w-full bg-gradient-to-r from-ink-600 via-ink-700/50 to-transparent" />
-      {kanji && (
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute right-2 top-0 hidden select-none font-serif text-[9rem] leading-none text-sakura-500/[0.08] xl:block"
-        >
-          {kanji}
-        </span>
+      {kanji && KANJI[kanji] && (
+        <KanjiInfo kanji={kanji} {...KANJI[kanji]} />
       )}
     </div>
   );
@@ -65,10 +115,12 @@ const EXPERIENCE = [
     company:
       "Universidad de Talca — desarrollo y defensa del trabajo de título, Ingeniería en Informática Empresarial",
     summary:
-      "Mi proyecto de título se convirtió en la base del sistema real de acreditación: definí la estrategia técnica, elegí las tecnologías adecuadas y levanté los primeros cimientos con metodología ágil.",
+      "Mi trabajo de título nació de la refactorización del sistema de acreditación legado y se convirtió en la base del sistema real: definí la estrategia técnica, elegí Angular y NestJS como stack y levanté los primeros cimientos con metodología Scrum.",
     bullets: [
-      "Definí el enfoque técnico del proyecto de modernización, evaluando frameworks y versiones compatibles con el entorno existente.",
+      "Definí el enfoque técnico del proyecto de modernización, eligiendo Angular y NestJS para el stack, evaluando versiones compatibles con el entorno existente.",
+      "Trabajé con metodología Scrum: planificación en sprints, entregas incrementales y revisión continua con el equipo.",
       "Inicié el desarrollo y la migración de las primeras tablas de datos, sentando las bases que continuaría en mi rol profesional posterior.",
+      "Las decisiones tomadas aquí se mantuvieron intactas al pasar al desarrollo profesional: las mismas tecnologías y metodología que hoy sostienen el sistema en producción.",
     ],
   },
   {
@@ -138,7 +190,8 @@ const SKILLS = [
   },
   {
     group: "Método",
-    tagline: "Código ordenado, pruebas, documentación y trabajo en equipo.",
+    tagline:
+      "Código ordenado, pruebas, documentación y trabajo en equipo. La IA acelera la creación de código, pero la revisión y la decisión final siempre son mías.",
     items: [
       "FastAPI",
       "pandas",
@@ -148,7 +201,9 @@ const SKILLS = [
       "Clean Architecture",
       "Postman",
       "Documentación Técnica",
-      "Desarrollo asistido por IA",
+      "IA como acelerador de código",
+      "Cursor",
+      "Opencode",
     ],
   },
 ];
@@ -180,15 +235,20 @@ const PROJECTS = [
 
 const EDUCATION = [
   {
-    title: "Ingeniero en Informática Empresarial",
-    period: "Marzo 2020 – Enero 2025",
+    title: "Ingeniería en Informática Empresarial",
+    period: "01 de marzo de 2020 – 31 de enero de 2025",
     place: "Universidad de Talca",
+    degrees: [
+      "Ingeniero en Informática Empresarial",
+      "Licenciado en Ciencias de la Gestión y Tecnologías de la Información",
+    ],
+    note: "Una sola carrera, dos grados: la licenciatura se obtiene al completar los 4 años y la ingeniería al completar los 5. Mi trabajo de título nació de la refactorización del sistema de acreditación legado de la Universidad de Talca.",
   },
   {
-    title:
-      "Licenciado en Ciencias de la Gestión y Tecnologías de la Información",
-    period: "Marzo 2020 – Enero 2025",
-    place: "Universidad de Talca",
+    title: "Técnico Profesional en Contabilidad",
+    period: "2018 – 2019",
+    place: "Enseñanza Media Técnico Profesional",
+    note: "Título obtenido tras mi práctica profesional en la Compañía Chilena de Fósforos S.A (noviembre 2019 – enero 2020).",
   },
 ];
 
@@ -424,6 +484,27 @@ export function Education() {
                   {edu.title}
                 </h3>
                 <p className="mt-1 text-sm text-paper-mute">{edu.place}</p>
+                {edu.degrees && (
+                  <ul className="mt-4 space-y-2">
+                    {edu.degrees.map((degree) => (
+                      <li
+                        key={degree}
+                        className="flex gap-3 leading-relaxed text-paper-dim"
+                      >
+                        <span
+                          aria-hidden="true"
+                          className="mt-[0.6em] h-1.5 w-1.5 shrink-0 rounded-full bg-sakura-500/70"
+                        />
+                        <span>{degree}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {edu.note && (
+                  <p className="mt-4 text-sm leading-relaxed text-paper-mute">
+                    {edu.note}
+                  </p>
+                )}
               </div>
             </div>
           ))}
