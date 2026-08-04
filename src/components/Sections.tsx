@@ -112,7 +112,7 @@ const EXPERIENCE = [
     bullets: [
       "Construí APIs REST en NestJS para los sistemas de Acreditación y Gestión de Investigaciones, con autenticación JWT y comunicación en tiempo real vía Socket.io, integrando Oracle DB mediante 70+ triggers PL/SQL y alcanzando 99% de cobertura OpenAPI/Swagger.",
       "Cargué en Oracle DB los datos ya depurados de Acreditación (+50 tablas), y migré los de Investigaciones —ya en Oracle— a un nuevo esquema mediante ETL en Python (extracción, limpieza, carga), sin pérdida de datos ni quiebres de integridad histórica.",
-      "Refactoricé código legado en PHP y PL/SQL hacia Angular/NestJS, completando 80% de la migración en Acreditación y 60% en Gestión de Investigaciones, reduciendo deuda técnica y disminuyendo los incidentes recurrentes en producción.",
+      "Modernicé las aplicaciones de PHP y PL/SQL hacia Angular/NestJS, completando 80% de la migración en Acreditación y 60% en Gestión de Investigaciones. El código existente funcionaba correctamente; el cambio se alineó con el proyecto de transformación digital de la Universidad, buscando una arquitectura coherente y sostenible a futuro.",
       "Ejecuté 3 despliegues fuera de horario para corregir un bug de concurrencia en tiempo real que afectaba a usuarios interactuando simultáneamente sobre el mismo registro desde ubicaciones distintas, evitando conflictos de datos en producción.",
       "Traduje el avance técnico a lenguaje natural en reuniones quincenales con grupos de 2 a 3 stakeholders académicos y administrativos no técnicos, manteniéndolos alineados con el progreso del proyecto.",
     ],
@@ -245,7 +245,7 @@ const EDUCATION = [
   {
     title: "Ingeniería en Informática Empresarial",
     period: "01 de marzo de 2020 – 31 de enero de 2025",
-    place: "Universidad de Talca",
+    place: "Universidad de Talca — Talca, Maule",
     degrees: [
       "Ingeniero en Informática Empresarial",
       "Licenciado en Ciencias de la Gestión y Tecnologías de la Información",
